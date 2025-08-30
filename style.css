@@ -1,17 +1,24 @@
+/* Base styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 40px;
+    margin: 0;
+    /* reset */
+    padding: 16px;
+    /* smaller default padding */
     background: #f9f9f9;
     color: #222;
     line-height: 1.6;
 }
 
+/* Section container */
 section {
     background: #fff;
     padding: 24px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     max-width: 700px;
+    width: 100%;
+    /* Make it fluid */
     margin: auto;
     transition: box-shadow 0.3s ease;
 }
@@ -20,6 +27,7 @@ section:hover {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
+/* Headings */
 h2 {
     color: #2c3e50;
     margin-bottom: 16px;
@@ -28,9 +36,11 @@ h2 {
     padding-bottom: 8px;
 }
 
+/* Lists */
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 li {
@@ -43,4 +53,43 @@ li {
 
 li:hover {
     background: #e9ecef;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    li {
+        font-size: 0.95rem;
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+
+    section {
+        padding: 12px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    li {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
 }
